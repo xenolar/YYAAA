@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport">
+    <title>Скроооллсы</title>
+ <style type="text/css">
+body {   
+   background: url(slon.png) center fixed;
+  background-size: cover;
+   }
+  </style>
+<style>
+    /* Оформление панели */
+#side-checkbox {
+    display: none;
+}
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: -360px;
+    background:green;
+    transition: all 0.5s;   
+    width: 120px;
+    height: 100vh;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    color: #FFF;
+    padding: 40px 20px;
+}
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #BFE2FF;
+}
+/* Оформление кнопки на странице */
+.side-button-1-wr {
+    text-align: left; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
+}
+.side-button-1 {
+    display: inline-block;
+}
+.side-button-1 .side-b {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #BFE2FF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: #914100;
+    cursor: pointer; 
+    border: 2px solid #BFE2FF;
+}
+.side-button-1 .side-b:hover,
+.side-button-1 .side-b:active,
+.side-button-1 .side-b:focus {
+    color: #fead00;
+}
+.side-button-1 .side-b:after,
+.side-button-1 .side-b:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.side-button-1 .side-open:after,
+.side-button-1 .side-open:before {
+    background: green;
+}
+.side-button-1 .side-close:after,
+.side-button-1 .side-close:before {
+    background: red;
+}
+.side-button-1 .side-b:before {
+    top: -6px;
+}
+.side-button-1 .side-b:hover:after,
+.side-button-1 .side-b:hover:before {
+    width: 100%;
+    left: 0;
+}
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+    display: block;
+}
+#side-checkbox:checked + .side-panel {
+    left: 0;
+}
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: #fead00;    
+    transition: all 280ms ease-in-out;    
+}
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);    
+    color: #fead00;
+}
+    </style>
+
+
+  <div style="position:absolute; left:545px; top: 3px; width: 100% fixed; ">
+    <h1 style="color:#fead00"> Старые скролсы  </h1>
+     </div>
+
+
+</head>
+
+<body>
+<input type="checkbox" id="side-checkbox" />
+<div class="side-panel">
+    <label class="side-button-2" for="side-checkbox">+</label>    
+    <div class="side-title">Здарова братаны :</div>
+     <p><a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%B0_%D0%9F%D0%B5%D1%80%D0%BB-%D0%A5%D0%B0%D1%80%D0%B1%D0%BE%D1%80">Лекция о перл харбор</a></p>
+     <p><a href="https://www.youtube.com/watch?v=Aj2CvNIVqpI">Орущий епифанцев</a></p>
+</div>
+<div class="side-button-1-wr">
+    <label class="side-button-1" for="side-checkbox">
+        <div class="side-b side-open">Открой бля</div>
+    </label>
+</div>
+</body>
+<p align="Right" style="color:#914100; font-size:30px">
+Ану бысто деньги отдал.</p>
+
+ <p align="Right" style="color:#914100; font-size:20px"><b>номер карты:</b><br>
+   <input type="text" value="XXXX XXXX XXXX XXXX"  size="18">
+  </p>
+
+<p align="Right" style="color:#914100; font-size:20px"><b>срок действия:</b><br>
+   <input type="text" value="01/20"  size="1">
+  </p>
+
+<p align="Right" style="color:#914100; font-size:20px"><b>Имя и фамилия:</b><br>
+   <input type="text" value="Латиницей!!!"  size="20">
+  </p>
+
+<p align="Right" style="color:#914100; font-size:20px"><b>CVC/CVV:</b><br>
+   <input type="text" value="123"  size="1">
+  </p>
+
+</body>
+
+</html>
